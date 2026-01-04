@@ -1,6 +1,6 @@
 #pragma once
 
-// COMMON DISPLAY CONFIGURATIONS 
+// COMMON DISPLAY CONFIGURATIONS
 #define DISPLAY_WIDTH 320
 #define DISPLAY_HEIGHT 240
 #define TFT_BACKLIGHT_ON 1
@@ -43,11 +43,3 @@ ROTATIONS:
 3 - Upside down landscape (270 degrees)
 */
 #define DISPLAY_ROTATION 0
-
-// DISPLAY DRIVERS
-#define ILI9341
-//#define ILI9488
-//#define ILI9486
-//#define ILI9481
-//#define ILI9163
-//#define ILI9342

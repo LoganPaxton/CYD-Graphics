@@ -1,13 +1,18 @@
 #include <Arduino.h>
 #include <ezgraphics.hpp>
 
-void setup() {
+ezgraphics graphics;
+
+void setup()
+{
     Serial.begin(115200);
-    ezgraphics graphics;
     graphics.init();
     Serial.println("Setup loop completed.");
+    
+    graphics.create_button(120, 160, 120, 60, TFT_BLUE, "Click Me", ALIGN_MID_MID, []() { Serial.println("Button Pressed!"); });
 }
 
-void loop() {
-    // nothing to put here at the moment.
+void loop()
+{
+    graphics.update();
 }

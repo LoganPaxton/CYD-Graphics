@@ -490,6 +490,8 @@
                 "USER_SETUP_LOADED=1",
                 "ILI9341_2_DRIVER=1",
                 "TFT_RGB_ORDER=TFT_BGR",
+                "TOUCH_CS=25",
+                "TOUCH_IRQ=-1",
                 "SPI_FREQUENCY=40000000",
                 "SPI_READ_FREQUENCY=20000000",
                 "SPI_TOUCH_FREQUENCY=2500000",
