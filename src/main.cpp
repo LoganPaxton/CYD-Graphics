@@ -1,18 +1,18 @@
 #include <Arduino.h>
-#include <ezgraphics.hpp>
+#include "spi_graphics.hpp"
+#include "utils/colors.hpp"
 
-ezgraphics graphics;
+Display screen;
 
-void setup()
-{
+void setup() {
     Serial.begin(115200);
-    graphics.init();
-    Serial.println("Setup loop completed.");
+    screen.init(); // Initalize the screen
     
-    graphics.create_button(120, 160, 120, 60, TFT_BLUE, "Click Me", ALIGN_MID_MID, []() { Serial.println("Button Pressed!"); });
+    for (int i = 0; i < 100; i++) {
+        screen.drawPixel(i, 20, SPI_RED);
+    }
 }
 
-void loop()
-{
-    graphics.update();
+void loop() {
+    // Nothing here yet.
 }
